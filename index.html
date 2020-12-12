@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>home page</title>	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+        $(window).on('load', function() { // makes sure the whole site is loaded 
+        $('#status').fadeOut(); // will first fade out the loading animation 
+        $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+         $('body').delay(350).css({'overflow':'visible'});
+        })
+
+    </script>
+</head>
+
+<body id="main">
+	<div id="preloader">
+  	<div id="status">&nbsp;</div>
+	</div>
+	<header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+         
+          <div class="navbar-brand">
+            <a href="index.html"><h1>Hack the Mountains</h1></a>          
+          </div>
+
+          <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+           <ul id="nav-list" class="nav navbar-nav navbar-right">
+           
+            <li id="navMenuButton">
+              <a href="index.html" onclick="$dc.loadMenuCategories();">
+                <span class="glyphicon glyphicon-home"></span><br class="hidden-xs"> Home</a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About</a>
+            </li>
+            <li class="dropdown page-scroll"  >
+                            <a href="" class="dropdown-toggle page-scroll" data-toggle="dropdown">
+                              <span class="glyphicon glyphicon-th-list"></span><br class="hidden-xs">Problem Statements<b class="caret"></b></a>
+                                    <ul class="dropdown-menu" >
+                                        <li><a href="#">Data Science</a></li>
+                                        <li><a href="#">AR/VR</a></li>              
+                                        <li><a href="#">IOT</a></li>              
+                                    </ul>
+            </li>
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-user"></span><br class="hidden-xs"> Team</a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs"> Schedule</a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-earphone"></span><br class="hidden-xs"> Contact</a>
+            </li>
+          </ul><!-- #nav-list -->
+        </div><!-- .collapse .navbar-collapse -->
+      </div><!-- .container -->
+    </nav><!-- #header-nav -->
+  </header>
+<div class="container">
+	<h1 id="title-ani">Hack The <br> Mountains</h1>	
+	<h2> A Virtual Hackathon</h2><br><br>
+</div>
+
+<div class="text-center" id="hack-details">
+	<h1>What is Hack The Mountains?</h1>
+	<h3 class="container" id="details">A hackathon is a hackday which is of 2 days in which various programmers, developers and designers collabrate with each other to bring something new and productive.<br>
+		This is virtual hackathon you will be provided with various real life problem statements you have to find the solutions for it an implement it.<br>
+	This is a great platform to showcase you skills and talent.The main aim is that you learn something from it.</h3>
+</div>
+<div class="container" id="sponsor">
+	<h2 class="text-center" style="font-weight: bolder;">Sponsors</h2>
+	<a href="https://mlh.io/">
+	<img class="img1" src="images/mlh.png" width="400" height="250">
+	</a>
+</div>
+<!-- Back to Top Button -->
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<footer>
+	<h4>Styled by</h4>	
+	<h5>Shubham Pawar</h5>
+	<div class="text-center">&copy; Copyright HackTheMountains 2020</div>	
+</footer>
+</body>
+</html>
